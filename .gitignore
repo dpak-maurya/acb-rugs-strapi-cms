@@ -113,4 +113,3 @@ dist
 build
 .strapi-updater.json
 .editorconfig
-package-lock.json
