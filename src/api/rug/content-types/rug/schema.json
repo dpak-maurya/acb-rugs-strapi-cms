@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rugs",
+  "info": {
+    "singularName": "rug",
+    "pluralName": "rugs",
+    "displayName": "rug",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "rug_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::rug-type.rug-type",
+      "inversedBy": "rugs"
+    }
+  }
+}
